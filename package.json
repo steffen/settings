@@ -42,7 +42,8 @@
     "node": ">= 12.14.1"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "transform": {}
   },
   "nodemonConfig": {
     "exec": "npm start",

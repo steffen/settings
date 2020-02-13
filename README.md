@@ -135,6 +135,15 @@ branches:
         apps: []
         users: []
         teams: []
+
+# For supporting branch protection rule patterns (https://github.blog/2018-08-15-protected-branch-updates/) and for supporting creating branch protection rules for branches that do not exist yet, you need to use the branch_protection_rules plugin.
+# It is based on GitHub's GraphQL API (https://developer.github.com/v4/).
+# The GraphQL option fields are mapped to their "snake_case" equivalent names:
+# https://developer.github.com/v4/input_object/createbranchprotectionruleinput/
+branch_protection_rules:
+  - pattern: releases/*
+    requires_approving_reviews: true
+
 ```
 
 ### Notes
